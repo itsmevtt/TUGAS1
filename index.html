@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <style>
+  	 body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+ 	 }
+ 	 h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+	  }
+	  h4 {
+	      font-size: 19px;
+	      line-height: 1.375em;
+	      color: #303030;
+	      font-weight: 400;
+	      margin-bottom: 30px;
+	  } 
+
+	  .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+	  }
+	  
+	  .bg-grey {
+	      background-color: #f6f6f6;
+	  }
+	  .logo-small {
+	      color: #f4511e;
+	      font-size: 50px;
+	  }
+	  .thumbnail {
+	      padding: 0 0 15px 0;
+	      border: none;
+	      border-radius: 0;
+	  }
+	  .thumbnail img {
+	      width: 100%;
+	      height: 100%;
+	      margin-bottom: 10px;
+	  } 
+
+	  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #e6adb9;
+	  }
+	  .carousel-indicators li {
+	      border-color: #e6adb9;
+	  }
+	  .carousel-indicators li.active {
+	      background-color: #e6adb9;
+	  }
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+	  .carousel-inner img {
+	      width: 100%; /* Set width to 100% */
+	      margin: auto;
+	      min-height:200px;
+	  }
+
+	  /* Hide the carousel text when the screen is less than 600 pixels wide */
+	  @media (max-width: 600px) {
+	    .carousel-caption {
+	      display: none; 
+	    }
+
+	  .slide {
+	      animation-name: slide;
+	      -webkit-animation-name: slide;
+	      animation-duration: 1s;
+	      -webkit-animation-duration: 1s;
+	      visibility: visible;
+	  }
+	  @keyframes slide {
+	    0% {
+	      opacity: 0;
+	      transform: translateY(70%);
+	    } 
+	    100% {
+	      opacity: 1;
+	      transform: translateY(0%);
+	    }
+	  }
+	  @-webkit-keyframes slide {
+	    0% {
+	      opacity: 0;
+	      -webkit-transform: translateY(70%);
+	    } 
+	    100% {
+	      opacity: 1;
+	      -webkit-transform: translateY(0%);
+	    }
+	  }
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">LoveYourself</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+        </ul>
+        <div>
+          <form class="navbar-form navbar-left">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+            </div>
+            </div>
+          </form>
+      </div>
+      <div>
+        <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+      </div>        
+      </div> 
+    </div>
+</nav>  
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="assets/images/header0.jpg" style="height: 371px">
+        <div class="carousel-caption">
+          <h3>YOU LIVE ONLY ONCE</h3>
+          <p>Where My Money Yah?</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="assets/images/header5.png" style="height: 371px">
+        <div class="carousel-caption">
+          <h3>YOLO YO!</h3>
+          <p>Lorem ipsum...</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-7" style="margin: 30px 0px 30px 30px">
+      <h2>About Company Page</h2><br>
+      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+    </div>
+    <div class="col-sm-3" style="margin: 100px 0px 0px 120px">
+    
+        <img src="assets/images/ourlogo.png" style="width: 75%">
+      
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-3" style="margin: 100px 0px 0px 30px">
+      
+      	<img src="assets/images/ly-title.png" style="width: 75%" class="slideanim">
+    
+    </div>
+    <div class="col-sm-8">
+      <h2>Our Values</h2><br>
+      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
+      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+<!-- End of Container (About Section) -->
+  
+<div id="project" class="container text-center">    
+  <h2>WHAT WE DO</h2><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="assets/images/header1.png" style="width:100%" alt="Image">
+      <h4>Current Project</h4>
+      <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper molestie vestibulum. Maecenas neque arcu, ornare non orci id, vulputate rhoncus dui. Mauris nunc dui, tempus eu justo eu, porttitor pellentesque nulla. Cras id enim tempor, tempor velit id, finibus nisi. Etiam vel sagittis dui, ut porta augue. Vivamus ac elementum elit, in gravida magna. Nam lacinia tellus ut justo finibus semper. Nunc nec enim eu dui sodales fermentum.</p>
+    </div>
+    <div class="col-sm-4"> 
+      <img src="assets/images/header2.png" style="width:100%" alt="Image">
+      <h4>Current Project 2</h4>
+      <p style="text-align: justify">Nunc ligula felis, varius in congue sit amet, vestibulum gravida ipsum. Morbi lectus neque, vulputate porttitor velit malesuada, hendrerit efficitur risus. Duis at dictum leo. Fusce commodo nulla vel tempor lacinia. Sed vel erat ac elit consequat tincidunt. Suspendisse et ante accumsan, ultrices lectus vitae, semper enim. Etiam tempus nulla metus, vitae auctor enim tristique eget. Suspendisse et nisl lacus. Duis sit amet elementum est. Aliquam id neque erat. </p>   
+    </div>
+    <div class="col-sm-4">
+      <div class="well">
+              <h2>LOGIN</h2>
+              <form action="/action_page.php">
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" name="remember"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+              </form>
+
+      </div>
+      <div class="well">
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper molestie vestibulum.</p>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<!-- Container (Love Yourself Project) -->
+<div class="container-fluid text-center">
+  <h3>LOVE YOURSELF PROJECT</h3>
+  <h4>let us in!</h4>
+  <br>
+  <div>
+    <div class="col-sm-4">
+      <img src="assets/images/foto1.jpg" style="width: 50%">
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="assets/images/foto2.jpg" style="width: 50%">
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="assets/images/foto3.jpg" style="width: 50%">
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+  <br><br>
+  <div>
+    <div class="col-sm-4">
+      <img src="assets/images/foto9.jpg" style="width: 50%">
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="assets/images/foto8.jpg" style="width: 50%">
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="assets/images/foto7.jpg" style="width: 50%">
+      <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Container (Contact Section) -->
+<div id="contacts" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row" style="margin: 20px 0px 0px 20px">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p>Cipadung, Cibiru</p>
+      <p>+62437515217</p>
+      <p>novita110396@gmail.com</p>
+    </div>
+    <div>
+      <div class="row" style="margin: 12px 0px 0px 0px">
+        <div class="col-sm-3 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-3 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+        <div class="col-sm-6 form-group">
+        	 <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="4"></textarea><br>
+        </div>
+      </div>
+     
+      <div class="row" style="margin-right: 1px">
+        <div class="col-sm-11 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Love Yourself, Love Myself</p>
+</footer>
+
+</body>
+</html>
